@@ -5,7 +5,7 @@ This is the main class for the simple ai JS lib and contains all the code for ev
 class simpleAI {
    /*
    @Function
-   @Args: ...
+   @Args: none
    @Returns: void
    Constructor for the class.
    */
@@ -41,7 +41,7 @@ class simpleAI {
 
    /*
    @Function
-   @args: Function (function)
+   @args: activationFunction (function)
    @returns: void
    */
    setActivationFunction(activationFunction) {
@@ -50,7 +50,7 @@ class simpleAI {
 
    /*
    @Function
-   @args: Function (function)
+   @args: weightsRandomFunction (function)
    @returns: void
    */
    setWeightsRandom(weightsRandomFunction) {
@@ -59,7 +59,7 @@ class simpleAI {
 
    /*
    @Function
-   @args: Function (function)
+   @args: biasRandomFunction (function)
    @returns: void
    */
    setBiasRandom(biasRandomFunction) {
@@ -68,7 +68,7 @@ class simpleAI {
 
    /*
    @Function
-   @args: Function (function)
+   @args: trainingRandomFunction (function)
    @returns: void
    */
    setTrainingRandom(trainingRandomFunction) {
