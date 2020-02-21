@@ -68,7 +68,7 @@ nn.setBiasRandom(() => {return Math.random()});
 // I recommend this being between 0 and 1
 ```
 #### setTrainingRandom()
-Used before `train()`
+Used before `evolve()`
 ```js
 nn.setTrainingRandom(() => {return 100 / (Math.random() - 0.5)});
 // I recommend this being between -0.005 and 0.005
