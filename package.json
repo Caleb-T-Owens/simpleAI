@@ -1,11 +1,12 @@
 {
   "name": "simpleai",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A lib to make making neural networks as easy as possible.",
   "main": "simpleAI-node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "PinkFluffyLlama",
-  "license": "MIT"
+  "license": "MIT",
+  "git": "https://github.com/PinkFlufflyLlama/simpleAI"
 }
