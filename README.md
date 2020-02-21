@@ -1,5 +1,5 @@
 # A simple AI library.
-So, my goal in making this library was to super simple to use. I didn't want someone to be put of playing with AI because they were put off by the tutorials they found online and weren't able to understand the content and/or couldn't make sense of the code samples.
+So, my goal in making this library was to super simple to use. I didn't want someone to be put of playing with AI because they were put off by the tutorials they found online and weren't able to understand the content and/or couldn't make sense of the code samples. [Discord](https://discord.gg/hqJZqMJ)
 ## Who is this for?
 I intend this library to be for not only people who are new to AI but also for people who are more experienced with AI. In version these current versions it only runs on the CPU but I would like to also add a GPU mode either with gpu.js or gl compute shaders.
 ## So how do I use this library?
@@ -16,7 +16,7 @@ console.log(nn.predict([1,0]));
 ## You say this is a simple library what if I want customizability!
 One of the things that I had in mind when making this library was customizability, so I have included many ways to change the way that the neural network works by modifying functions via some methods. [See documentation](#Documentation)
 # Documentation
-I am going to go through the recommended functions in the order that you should use them then the unrecommended. You will need to have made your simpleAI object before running these functions
+I am going to go through the recommended functions in the order that you should use them then the unrecommended. You will need to have made your simpleAI object before running these functions. Feel free to ask in [the discord](https://discord.gg/hqJZqMJ) too, I love to help.
 #### setLayerSizes()
 *Optional but strongly recommended*
 This function sets the layer sizes of the neural network. It expects an array which has two or more whole numbers. Each entry specifies how many nodes each layer has.
