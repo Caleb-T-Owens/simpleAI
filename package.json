@@ -8,5 +8,8 @@
   },
   "author": "PinkFluffyLlama",
   "license": "MIT",
-  "git": "https://github.com/PinkFlufflyLlama/simpleAI"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PinkFlufflyLlama/simpleAI"
+  }
 }
