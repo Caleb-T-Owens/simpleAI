@@ -1,6 +1,6 @@
 {
   "name": "simpleai",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A lib to make making neural networks as easy as possible.",
   "main": "simpleAI-node.js",
   "scripts": {
@@ -11,5 +11,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/PinkFlufflyLlama/simpleAI"
-  }
+  },
+  "keywords": ["ai", "simple", "easy", "neural network", "AI"]
 }
