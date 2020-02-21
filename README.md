@@ -14,7 +14,7 @@ nn.randomizeBiases(); // 5 randomize the biases
 console.log(nn.predict([1,0]));
 ```
 ## You say this is a simple library what if I want customizability!
-One of the things that I had in mind when making this library was customizability, so I have included many ways to change the way that the neural network works by modifying functions via some methods. (See documentation)[#Documentation]
+One of the things that I had in mind when making this library was customizability, so I have included many ways to change the way that the neural network works by modifying functions via some methods. [See documentation](#Documentation)
 # Documentation
 I am going to go through the recommended functions in the order that you should use them then the unrecommended. You will need to have made your simpleAI object before running these functions
 #### setLayerSizes()
