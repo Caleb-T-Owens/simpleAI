@@ -1,6 +1,6 @@
 {
   "name": "simpleai",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A lib to make making neural networks as easy as possible.",
   "main": "simpleAI-node.js",
   "scripts": {
