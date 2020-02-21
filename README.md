@@ -43,10 +43,10 @@ This function calculates all the values of the nodes and returns the values of t
 ```js
 nn.predict([0,1]);
 ```
-#### train()
+#### evolve()
 This function chooses one of the weights or biases and either adds or subtracts an amount specified by the training random, by default this is 100 / (Math.random() - 0.5)
 ```js
-nn.train();
+nn.evolve();
 ```
 ### Optional functions
 I am not going to give support for using these, you should **not** need to use these.
