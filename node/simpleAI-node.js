@@ -26,7 +26,7 @@ class simpleAI {
       this.network = []; // This is a rather important one, it is the actual values of the nodes. I set the actual values of it in the build Function but I am still making it here so if someone runs a predict function it will hopefully make less of an error.
    }
 
-   static getRandomInt (max) {
+   getRandomInt (max) {
       return Math.floor(Math.random() * Math.floor(max));
    }
    /*
