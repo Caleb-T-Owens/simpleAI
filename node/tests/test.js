@@ -19,10 +19,10 @@ let tryFunction = (functionToRun, expectedOutput) => {
    }
 };
 
-
+let nn;
 try {
    console.log("Attempting to make instance of SimpleAI class");
-   let nn = new SimpleAI();
+   nn = new SimpleAI();
    console.log("Success!");
 } catch (error) {
    console.log("Fail");
