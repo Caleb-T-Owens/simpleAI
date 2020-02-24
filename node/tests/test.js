@@ -1,7 +1,7 @@
 let SimpleAI = require("../simpleAI-node.js");
 
-let tryFunction = (functionToRun, expectedOutput) => {
-   console.log(`Attempting to run ${functionToRun.name}()`);
+let tryFunction = (functionToRun, functionName, expectedOutput) => {
+   console.log(`Attempting to run ${functionName}()`);
    try {
       let output = functionToRun();
       if (expectedOutput != undefined) {
@@ -16,6 +16,7 @@ let tryFunction = (functionToRun, expectedOutput) => {
       }
    } catch (error) {
       console.log("Error")
+      console.error(error);
    }
 };
 
@@ -29,14 +30,63 @@ try {
    console.error(error);
 }
 
-tryFunction(nn.setLayerSizes([2,3,2]));
 
-tryFunction(nn.build());
+try {
+   console.log("Attempting to run nn.setLayerSizes()");
+   nn.setLayerSizes([2,3,2]);
+   console.log("Success!");
 
-tryFunction(nn.randomizeWeights());
+} catch (error) {
+   console.log("Failed!");
+   console.error(error);
+}
 
-tryFunction(nn.randomizeWeights());
+try {
+   console.log("Attempting to run nn.build()");
+   nn.build();
+   console.log("Success!");
 
-tryFunction(nn.evolve());
+} catch (error) {
+   console.log("Failed!");
+   console.error(error);
+}
 
-tryFunction(nn.predict());
+try {
+   console.log("Attempting to run nn.randomizeWeights()");
+   nn.randomizeWeights();
+   console.log("Success!");
+
+} catch (error) {
+   console.log("Failed!");
+   console.error(error);
+}
+
+try {
+   console.log("Attempting to run nn.randomizeWeights()");
+   nn.randomizeWeights();
+   console.log("Success!");
+
+} catch (error) {
+   console.log("Failed!");
+   console.error(error);
+}
+
+try {
+   console.log("Attempting to run nn.evolve()");
+   nn.evolve()
+   console.log("Success!");
+
+} catch (error) {
+   console.log("Failed!");
+   console.error(error);
+}
+
+try {
+   console.log("Attempting to run nn.predict()");
+   nn.predict([0,1]);
+   console.log("Success!");
+
+} catch (error) {
+   console.log("Failed!");
+   console.error(error);
+}
