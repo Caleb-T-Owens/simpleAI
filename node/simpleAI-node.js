@@ -3,12 +3,8 @@
 This is the main class for the simple ai JS lib and contains all the code for evolving, creating, saving, and loading neural networks
 */
 class simpleAI {
-   /*
-   @Function
-   @Args: ...
-   @Returns: void
-   Constructor for the class.
-   */
+
+
    constructor() {
       this.layerSizes = [2, 2]; // This is set to a four node, two layer network as a default;
       this.activationFunction = (x) => {
@@ -29,57 +25,50 @@ class simpleAI {
    getRandomInt (max) {
       return Math.floor(Math.random() * Math.floor(max));
    }
-   /*
-   @Function
-   @args: sizes (array of ints)
-   @returns: void
-   This is just a small function that sets the node sizes for the neural network
-   */
+
+   /**
+    * This function sets the layer sizes of the neural network. It expects an array which has two or more whole numbers. Each entry specifies how many nodes each layer has.
+    * @param {Array} sizes 
+    */
    setLayerSizes(sizes) {
       this.layerSizes = sizes;
    }
 
-   /*
-   @Function
-   @args: Function (function)
-   @returns: void
-   */
+   /**
+    * 
+    * @param {Function} activationFunction 
+    */
    setActivationFunction(activationFunction) {
       this.activationFunction = activationFunction;
    }
 
-   /*
-   @Function
-   @args: Function (function)
-   @returns: void
-   */
+   /**
+    * 
+    * @param {Function} weightsRandomFunction 
+    */
    setWeightsRandom(weightsRandomFunction) {
       this.weightsRandom = weightsRandomFunction;
    }
 
-   /*
-   @Function
-   @args: Function (function)
-   @returns: void
-   */
+   /**
+    * 
+    * @param {Function} biasRandomFunction 
+    */
    setBiasRandom(biasRandomFunction) {
       this.biasRandom = biasRandomFunction;
    }
 
-   /*
-   @Function
-   @args: Function (function)
-   @returns: void
-   */
+   /**
+    * 
+    * @param {Function} trainingRandomFunction 
+    */
    setTrainingRandom(trainingRandomFunction) {
       this.trainingRandom = trainingRandomFunction;
    }
 
-   /*
-   @Function
-   @args: none
-   @returns: void
-   */
+   /**
+    * This function creates the layers and node objects inside your nn object
+    */
    build() {
       // So we have got our array that tels us how many nodes each layers have and how many layers there are at the same time (index
       // length + 1) I don't think that I will also set all the weights and biases here at the same time into one object.
@@ -115,6 +104,9 @@ class simpleAI {
 
    }
 
+   /**
+    * This function sets the weights in the neural network
+    */
    randomizeWeights() {
       this.network.forEach((layer, layerIndex) => {
          if (layerIndex == 0) {
@@ -128,6 +120,9 @@ class simpleAI {
       });
    }
 
+   /**
+    * This function sets the biases in the neural network
+    */
    randomizeBiases() {
       this.network.forEach((layer, layerIndex) => {
          if (layerIndex == 0) {
@@ -139,12 +134,10 @@ class simpleAI {
       });
    }
 
-   /*
-   @Function
-   @Args: weightBiasChance (number (0 to 1))
-   @Returns: void
-   This is the evolve function that modifies one of the wights or biases
-   */
+   /**
+    * This function chooses one of the weights or biases and either adds or subtracts an amount specified by the training random, by default this is 100 / (Math.random() - 0.5). This function also requires an input from 0 to 1 to set the boundary of choice for whether to modify a bias or weight. 0.8 should be good.
+    * @param {Number} weightBiasChance 
+    */
    evolve(weightBiasChance) {
       let i1 = Math.random();
       if (weightBiasChance > i1) { // Modify Weights
@@ -164,12 +157,10 @@ class simpleAI {
       }
    }
 
-   /* 
-   @Function
-   @Args: inputs (array)
-   @Returns: outputs (array);
-   predicts the values from the input
-   */
+   /**
+    * This function calculates all the values of the nodes and returns the values of the last layer. This function expects an array that is the same size as the first layer
+    * @param {Array} inputs 
+    */
    predict(inputs) {
       if (inputs.length != this.layerSizes[0]) {
          throw "Error: prediction input not equal to network's first layer";
