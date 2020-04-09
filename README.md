@@ -73,6 +73,3 @@ Used before `evolve()`
 nn.setTrainingRandom(() => {return 100 / (Math.random() - 0.5)});
 // I recommend this being between -0.005 and 0.005
 ```
-
-### Can I use this in the browser?
-In versions 1.0.0 to 1.0.10 I supplied in the npm package a es6 module for this library however, due to the poor support of es6 modules in general :( so I have decided not to include a browser version until a proper solution can be made.
